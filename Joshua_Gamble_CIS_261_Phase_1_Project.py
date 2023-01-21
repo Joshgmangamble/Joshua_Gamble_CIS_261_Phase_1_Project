@@ -1,6 +1,3 @@
-#
-#
-#
 def GetEmpName():
     empname = input("Enter employee name: ")
     return empname
@@ -31,6 +28,7 @@ def printinfo(empname, hours, hourlyrate, grosspay, taxrate, incometax, netpay):
     print(f"Tax Rate: {taxrate:,.1%}")
     print(f"Income Tax: {incometax:,.2f}")
     print(f"Net Pay: {netpay:,.2f}")
+    print()
 
 def PrintTotals(TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay):    
     print()
@@ -40,6 +38,7 @@ def PrintTotals(TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay):
     print(f"Total Gross Pay: {TotGrossPay:,.2f}")
     print(f"Total Tax: {TotTax:,.2f}")
     print(f"Total Net Pay: {TotNetPay:,.2f}")
+    print()
     
 
 if __name__ == "__main__":
@@ -64,11 +63,8 @@ if __name__ == "__main__":
         TotHours += hours
         # write the code to increment the other total variables with the appropriate values
         TotGrossPay = TotGrossPay + grosspay
-        TotTax = TotTax + taxrate
+        TotTax = TotTax + incometax
         TotNetPay = TotNetPay + netpay
-        
+    print()        
 
     PrintTotals (TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay)
-
-
-
